@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const Input = ({
-  numValues,
-  inputClass,
-  parentClass,
-  onChange,
-  type,
-  separator,
+  numValues = 4,
+  inputClass = "",
+  parentClass = "",
+  onChange = () => {},
+  type = "number",
+  separator = "",
 }) => {
   const [fields, setFields] = useState(new Array(numValues).fill(""));
   const refs = useRef([]);
@@ -18,6 +18,7 @@ const Input = ({
       setFields((prevOtp) => {
         const newOtp = [...prevOtp];
         newOtp[index] = value;
+        onChange(newOtp);
         return newOtp;
       });
 
