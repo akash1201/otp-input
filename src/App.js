@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./custom.css";
+import Input from "./Components/Input";
 
-function App() {
+function OTPInput({
+  numValues = 6,
+  inputClass = "",
+  parentClass = "",
+  onChange = () => {},
+  type = "number",
+  separator = "",
+}) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Input
+        numValues={numValues}
+        inputClass={inputClass}
+        parentClass={parentClass}
+        onChange={onChange}
+        type={type}
+        separator={separator}
+      />
+    </>
   );
 }
 
-export default App;
+export default OTPInput;

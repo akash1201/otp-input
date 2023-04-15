@@ -1,0 +1,26 @@
+/* Styling for the OTP input component */
+.div-class {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .input-class {
+          width: 40px; /* Width of each input box */
+          height: 40px; /* Height of each input box */
+          margin: 0 5px; /* Margin between each input box */
+          font-size: 24px; /* Font size of the OTP digits */
+          text-align: center; /* Center align the OTP digits */
+          outline: none; /* Remove default focus outline */
+        }
+        input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+          }
+
+          /* Firefox */
+          input[type=number] {
+          -moz-appearance: textfield;
+          }
+        
