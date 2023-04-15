@@ -2,6 +2,7 @@
   "name": "@akash/otp-input",
   "version": "0.1.0",
   "private": false,
+  "repository": "git@github.com:akash1201/otp-input.git",
   "babel": {
     "presets": [
       "@babel/preset-react"
