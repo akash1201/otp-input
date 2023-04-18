@@ -10,7 +10,6 @@ function OTPInput({
   separator = "",
 }) {
   return (
-    <>
       <Input
         numValues={numValues}
         inputClass={inputClass}
@@ -19,7 +18,6 @@ function OTPInput({
         type={type}
         separator={separator}
       />
-    </>
   );
 }
 
