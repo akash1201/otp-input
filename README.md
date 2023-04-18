@@ -1,8 +1,5 @@
 # @akashch/otp-input
 
-[![npm version](https://badge.fury.io/js/react-otp-input.svg)]
-[![npm](https://img.shields.io/npm/dw/react-otp-input.svg?logo=npm)](https://www.npmjs.com/package/@akashch/otp-input) [![npm](https://img.shields.io/bundlephobia/minzip/@akashch/otp-input)](https://www.npmjs.com/package/@akashch/otp-input)
-
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 A fully customizable, one-time password input component for the web built with React.
