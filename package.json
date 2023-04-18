@@ -65,5 +65,32 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [ 
+    "otp",
+    "input",
+    "code",
+    "passcode",
+    "component",
+    "OTP",
+    "two-factor authentication",
+    "verification code",
+    "one-time password",
+    "multi-factor authentication",
+    "authentication code",
+    "security code",
+    "token validation",
+    "input validation",
+    "user authentication",
+    "code verification",
+    "authentication token",
+    "time-based OTP",
+    "SMS OTP",
+    "email OTP",
+    "authenticator app",
+    "Google Authenticator",
+    "TOTP",
+    "HOTP",
+    "passwordless authentication"
   ]
 }
