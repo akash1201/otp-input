@@ -18,7 +18,7 @@ const Input = ({
       setFields((prevOtp) => {
         const newOtp = [...prevOtp];
         newOtp[index] = value;
-        onChange(newOtp);
+        onChange(newOtp.join(''));
         return newOtp;
       });
 
