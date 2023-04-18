@@ -1,4 +1,3 @@
-import "./custom.css";
 import Input from "./Components/Input";
 
 function OTPInput({

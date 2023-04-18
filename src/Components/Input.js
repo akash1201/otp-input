@@ -42,9 +42,10 @@ const Input = ({
   };
 
   return (
-    <div className={`div-class ${parentClass}`}>
+    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} className={`div-class ${parentClass}`}>
       {fields?.map((item, index) => (
         <input
+         style={{width: '40px', geught: '50px', margin: '0 5px', fontSize: '24px', textAlign: 'center', outline: 'none'}}
           key={index}
           type={type}
           ref={(ref) => (refs.current[index] = ref)}

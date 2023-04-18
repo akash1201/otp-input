@@ -20,5 +20,5 @@ export default {
     commonjs(),
     terser()
   ],
-  external: [Object.keys(pkg.peerDependencies), './custom.css']
+  external: Object.keys(pkg.peerDependencies)
 };
