@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# @akashch/otp-input
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![npm version](https://badge.fury.io/js/react-otp-input.svg)]
+[![npm](https://img.shields.io/npm/dw/react-otp-input.svg?logo=npm)](https://www.npmjs.com/package/@akashch/otp-input) [![npm](https://img.shields.io/bundlephobia/minzip/@akashch/otp-input)](https://www.npmjs.com/package/@akashch/otp-input)
 
-## Available Scripts
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-In the project directory, you can run:
+A fully customizable, one-time password input component for the web built with React.
 
-### `npm start`
+<!--
+[CodeSandbox](https://codesandbox.io/s/react-otp-input-demo-v2-1iy52) -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[![NPM](https://nodei.co/npm/@akashch/otp-input.png?compact=true)](https://nodei.co/npm/@akashch/otp-input/)
 
-### `npm test`
+#### To install the latest stable version:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm install --save @akashch/otp-input
+```
 
-### `npm run build`
+#### Basic usage:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```jsx
+import React, { useState } from "react";
+import OtpInput from "@akashch/otp-input";
+export default function App() {
+  const [otp, setOtp] = useState("");
+  return (
+    <OtpInput
+      numValues={6}
+      inputClass={"any-class"}
+      parentClass={"any-parent-class"}
+      onChange={(otp) => {
+        setOtp(otp);
+      }}
+      type={"number"}
+    />
+  );
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<table>
+  <tr>
+    <th>Name<br/></th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Default</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>numValues</td>
+    <td>number</td>
+    <td>false</td>
+    <td>4</td>
+    <td>Number of inputs to be rendered.</td>
+  </tr>
+  <tr>
+    <td>onChange</td>
+    <td>function</td>
+    <td>true</td>
+    <td>console.log</td>
+    <td>Returns OTP code typed in inputs.</td>
+  </tr>
+  <tr>
+    <td>separator</td>
+    <td>Any Character<br/></td>
+    <td>false</td>
+    <td>none</td>
+    <td>Provide a custom separator between inputs by passing a component. For instance, <code>&lt;span&gt;-&lt;/span&gt;</code> would add <code>-</code> between each input.</td> You can also pass a function that returns a component, where the function will get the index of the separator being rendered as an argument.
+  </tr>
+  <tr>
+    <td>inputClass</td>
+    <td>className (string)</td>
+    <td>false</td>
+    <td>none</td>
+    <td>Style applied or class passed to parent of inputs.</td>
+  </tr>
+  <tr>
+    <td>inputClass</td>
+    <td>className (string)</td>
+    <td>false</td>
+    <td>none</td>
+    <td>class passed to each input.</td>
+  </tr>
+  <tr>
+    <td>inputType</td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input#input_types">&lt;input&gt; type<a></td>
+    <td>false</td>
+    <td>number</td>
+    <td>The type of the input that will be passed to the input element being rendered. In v2 <code>isInputNum</code> used to set the input type as <code>tel</code> and prevented non numerical entries, so as to avoid the spin buttons added to the inputs with input type <code>number</code>. That behaviour is still supported if you pass <code>tel</code> to the inputType prop.</td>
+  </tr>
+</table>
 
-### `npm run eject`
+## Development
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### To run the vite example:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+cd example
+npm run dev
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Checklist
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/akash1201/@akashch/otp-input/pulls) [![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/akash1201/@akashch/otp-input)
 
-## Learn More
+- [ ] Write tests
+- [ ] Add actions for lint checks and tests
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Feel free to open [issues](https://github.com/akash1201/otp-input/issues/new/choose) and [pull requests](https://github.com/akash1201/otp-input/pulls)!
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[![NPM](https://img.shields.io/npm/l/@akashch/otp-input)](https://github.com/akash1201/otp-input/blob/master/LICENSE)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
