@@ -1,6 +1,6 @@
 {
   "name": "@akashch/otp-input",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": false,
   "repository": "git@github.com:akash1201/otp-input.git",
   "main": "dist/index.cjs.js",
