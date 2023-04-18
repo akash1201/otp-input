@@ -16,10 +16,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "rollup -c -w",
+    "start": "react-scripts start",
     "build": "rollup -c",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +49,7 @@
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.1",
+    "@storybook/react": "^7.0.5",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "babel-core": "^6.26.3",
